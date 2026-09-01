@@ -1,0 +1,296 @@
+/* BSmart Design System & Global Styles */
+
+:root {
+  /* Brand Palette */
+  --primary: #F57224;
+  --primary-hover: #E05B10;
+  --primary-light: #FFF0E6;
+  --primary-gradient: linear-gradient(135deg, #FF6A00 0%, #EE0979 100%);
+  --secondary: #FF4500;
+  --ai-purple: #6366F1;
+  --ai-purple-light: #EEF2FF;
+  --ai-gradient: linear-gradient(135deg, #FF6B00 0%, #8B5CF6 50%, #EC4899 100%);
+  --success: #10B981;
+  --success-light: #D1FAE5;
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+
+  /* Typography Colors - Strictly Standardized */
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --text-muted: #A1A1AA;
+  --text-inverse: #FFFFFF;
+
+  /* Surface & Backgrounds */
+  --bg-page: #F4F5F8;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --border-color: #E4E4E7;
+  --border-light: #F4F4F5;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-ai: 0 8px 24px rgba(245, 114, 36, 0.25);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Design System Consistent Buttons (Large & Small variants) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-inverse);
+  box-shadow: 0 2px 8px rgba(245, 114, 36, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 114, 36, 0.4);
+}
+
+.btn-secondary {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid rgba(245, 114, 36, 0.2);
+}
+
+.btn-secondary:hover {
+  background: #FFE4D1;
+  color: var(--primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background: var(--bg-page);
+  border-color: var(--text-secondary);
+}
+
+.btn-ai {
+  background: var(--ai-gradient);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-ai);
+}
+
+.btn-ai:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+/* Button Sizes - per Habib Think rule #1 */
+.btn-lg {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+  border-radius: var(--radius-md);
+}
+
+.btn-sm {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+.btn-icon.btn-sm {
+  width: 32px;
+  height: 32px;
+}
+
+/* Global Container Layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+/* Sticky Header with Dynamic Background Transition on Scroll */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: var(--transition);
+  background: var(--primary-gradient);
+}
+
+.header-wrapper.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-wrapper.scrolled .header-top-bar {
+  display: none;
+}
+
+.header-wrapper.scrolled .logo-text {
+  color: var(--primary) !important;
+}
+
+.header-wrapper.scrolled .nav-icon-btn {
+  color: var(--text-primary);
+  background: var(--bg-page);
+}
+
+.header-wrapper.scrolled .nav-link {
+  color: var(--text-primary);
+}
+
+/* Floating AI Assistant Sparkle Button */
+.floating-ai-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--ai-gradient);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(245, 114, 36, 0.45);
+  transition: var(--transition);
+  animation: pulse-glow 3s infinite;
+}
+
+.floating-ai-fab:hover {
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 12px 36px rgba(245, 114, 36, 0.6);
+}
+
+.floating-ai-fab .sparkle-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #FF0055;
+  color: #FFF;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 2px solid #FFF;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(245, 114, 36, 0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(245, 114, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 114, 36, 0); }
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-sale {
+  background: #FFE5E5;
+  color: #E53935;
+}
+
+.badge-official {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.badge-ai {
+  background: var(--ai-purple-light);
+  color: var(--ai-purple);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
