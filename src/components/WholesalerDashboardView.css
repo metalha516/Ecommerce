@@ -1,0 +1,276 @@
+/* WholesalerDashboardView CSS */
+
+.wholesaler-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.wholesaler-header-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.wholesaler-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.company-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ai-purple-light);
+  color: var(--ai-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-name-row h2 {
+  font-size: 22px;
+}
+
+.badge-enterprise {
+  background: var(--ai-purple-light);
+  color: var(--ai-purple);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.company-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Regional Distribution Chart */
+.regional-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.reg-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reg-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.reg-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reg-val {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.reg-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: #F4F4F5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.reg-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #F57224, #FF8C00);
+  border-radius: 5px;
+}
+
+/* Capacity Gauge */
+.capacity-gauge-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.gauge-circle-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: #F4F4F5;
+  stroke-width: 12;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke: #F57224;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.gauge-inner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-percent {
+  font-size: 26px;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.gauge-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.capacity-specs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  background: #F8F9FA;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.spec-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+/* Wholesaler AI Card */
+.wholesaler-ai-card {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.ai-recommendation-alert {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid #F59E0B;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #FEF3C7;
+}
+
+.alert-icon {
+  color: #F59E0B;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ai-recommendation-alert h4 {
+  font-size: 14px;
+  color: #F59E0B;
+  margin-bottom: 2px;
+}
+
+.ai-recommendation-alert p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Client Table */
+.client-table-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.client-table th, .client-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 13px;
+}
+
+.client-table th {
+  background: #F8F9FA;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.client-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.client-icon {
+  color: var(--ai-purple);
+}
+
+.term-pill {
+  background: #EEF2FF;
+  color: #4F46E5;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.text-orange {
+  color: var(--primary);
+}
