@@ -1,0 +1,87 @@
+/* App Global Layout & Footer Styles */
+
+.wishlist-page-card, .placeholder-view-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.account-grid-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.shortcut-btn {
+  background: #F8F9FA;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.shortcut-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Footer */
+.footer-bar {
+  background: #18181B;
+  color: #FFFFFF;
+  padding: 48px 0 32px;
+  margin-top: 60px;
+  border-top: 1px solid #27272A;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.footer-col p {
+  font-size: 13px;
+  color: #A1A1AA;
+  margin-top: 8px;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #A1A1AA;
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--primary);
+}
