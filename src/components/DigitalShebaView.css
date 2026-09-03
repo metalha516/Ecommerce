@@ -311,3 +311,39 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .sheba-container {
+    padding: 0 12px;
+  }
+  .sheba-tabs-row {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sheba-tab-btn {
+    white-space: nowrap;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .topup-widget-card {
+    padding: 20px 14px;
+  }
+  .sheba-section {
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sheba-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .sheba-card-body {
+    padding: 10px;
+  }
+  .sheba-card-body h4 {
+    font-size: 12px;
+  }
+}

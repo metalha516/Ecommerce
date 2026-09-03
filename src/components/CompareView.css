@@ -280,3 +280,21 @@
   font-weight: 700;
   color: var(--ai-purple);
 }
+
+@media (max-width: 768px) {
+  .compare-container {
+    padding: 0 12px;
+  }
+  .compare-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .cmp-products-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .cmp-table-card {
+    padding: 16px 12px;
+  }
+}

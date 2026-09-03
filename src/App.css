@@ -85,3 +85,11 @@
 .footer-col a:hover {
   color: var(--primary);
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 16px;
+  }
+}

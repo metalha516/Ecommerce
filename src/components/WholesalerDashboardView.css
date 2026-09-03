@@ -274,3 +274,40 @@
 .text-orange {
   color: var(--primary);
 }
+
+@media (max-width: 900px) {
+  .charts-main-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .wholesaler-container {
+    padding: 0 12px;
+  }
+  .wholesaler-header-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .wholesaler-actions {
+    width: 100%;
+  }
+  .wholesaler-actions button {
+    flex: 1;
+  }
+  .wholesaler-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .client-table-card {
+    padding: 16px 12px;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .wholesaler-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

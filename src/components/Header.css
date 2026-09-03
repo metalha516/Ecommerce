@@ -394,3 +394,54 @@
   .ai-btn-text { display: none; }
   .icon-label { display: none; }
 }
+
+@media (max-width: 768px) {
+  .header-main-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 12px;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  .logo-icon-wrapper {
+    width: 34px;
+    height: 34px;
+  }
+  .search-box-form {
+    order: 3;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-top: 2px;
+  }
+  .header-actions-group {
+    margin-left: auto;
+    gap: 6px;
+  }
+  .nav-icon-btn {
+    padding: 6px 8px;
+  }
+  .nav-sub-container {
+    padding: 0 12px;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-sub-container::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-links-row {
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-dropdown-trigger {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .nav-link {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}

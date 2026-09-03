@@ -281,8 +281,8 @@ button {
 
 /* Scrollbar customization */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-page);
@@ -293,4 +293,19 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
+}
+
+/* Mobile Global Utilities */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (max-width: 640px) {
+  .floating-ai-fab {
+    bottom: 20px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
 }
